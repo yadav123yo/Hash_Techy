@@ -1,5 +1,7 @@
 # Hash_Techy
 
+## Deployed Link = https://hash-techy-b5kn.vercel.app/
+
 ## Tech Stacks
 
 - React Js
