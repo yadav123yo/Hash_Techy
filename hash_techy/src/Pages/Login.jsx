@@ -64,7 +64,7 @@ function Login() {
    >
     <Heading
     textAlign={'center'}>LogIn</Heading>
-    
+
     <FormLabel mt='4'>Email</FormLabel>
     <Input type='text' placeholder='Enter your email'  name='email' value={formdata.email} onChange={handleChange} />
     <FormLabel mt='4'>Password</FormLabel>
@@ -79,6 +79,14 @@ function Login() {
         <Text color='blue' cursor={'pointer'} fontWeight={'bold'} ml='2'>Signup</Text>
         </Link>
     </Flex>
+    <Text fontWeight={900} mt={4}>Some time signup/login takes around 3 to 4 minutes.
+        And Some times it would be faild due to api error that deployed on render so for avoid that 
+         use
+          Email id = eve.holt@reqres.in and
+        Password = cityslicka
+
+        For Any query read github reademe file.
+    </Text>
         </Box>
   )
 }

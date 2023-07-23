@@ -83,6 +83,14 @@ function Signup() {
         <Text color='blue' cursor={'pointer'} fontWeight={'bold'} ml='2'>Login</Text>
         </Link>
     </Flex>
+    <Text fontWeight={900} mt={4}>Some time signup/login takes around 3 to 4 minutes.
+        And Some times it would be faild due to api error that deployed on render so for avoid that 
+         use
+          Email id = eve.holt@reqres.in and
+        Password = cityslicka
+
+        For any query please read Github Readme File. 
+    </Text>
         </Box>
   )
 }
