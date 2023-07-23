@@ -10,7 +10,7 @@ function Private({children}) {
 
     useEffect(() => {
     if(state.isAuth === false){
-        navigate('/login')
+        navigate('/')
     }
     }, [state.isAuth, navigate])
 

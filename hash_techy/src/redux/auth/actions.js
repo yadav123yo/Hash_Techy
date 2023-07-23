@@ -9,10 +9,11 @@ import {
 import axios from 'axios';
 
 export const signup = (data) => async (dispatch) => {
+    // console.log('data: ', data);
     dispatch({ type: AUTH_SIGNUP_LOADING });
     try {
-        const res = await axios.post('https://nine1mobiles.onrender.com/signup', data);
-        console.log('res: ', res);
+        const res = await axios.post('https://nordstrom-2y4v.onrender.com/users/signup', data);
+        // console.log('res: ', res);
         dispatch({ type: AUTH_SIGNUP_SUCCESS, payload: {
             message: res.data.message
         }});
@@ -25,14 +26,15 @@ export const signup = (data) => async (dispatch) => {
 }
 
 export const signin = (data) => async (dispatch) => {
+    // console.log('data: ', data);
     dispatch({ type: AUTH_SIGNIN_LOADING });
     try {
-        const res = await axios.post('https://nine1mobiles.onrender.com/login', data);
-        console.log('res: ', res);
+        const res = await axios.post('https://nordstrom-2y4v.onrender.com/users/login', data);
+        // console.log('res: ', res);
         dispatch({ type: AUTH_SIGNIN_SUCCESS, payload: {
             message: res.data.message,
             token: res.data.token,
-            role: res.data.role
+            name: res.data.username
         }});
     } catch (error) {
         console.log('error: ', error);

@@ -79,7 +79,7 @@ function Signup() {
     variant={'outline'} border='2px solid black'  _hover={{bg:'black',color:'white'}} w='100%' onClick={handleSubmit}>SignUp</Button>
     <Flex mt='4' justifyContent='center' color={'grey'}>
         <p>Already have an account?</p>
-        <Link to='/login'>
+        <Link to='/'>
         <Text color='blue' cursor={'pointer'} fontWeight={'bold'} ml='2'>Login</Text>
         </Link>
     </Flex>

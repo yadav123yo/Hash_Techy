@@ -63,8 +63,8 @@ function Login() {
     rounded={'md'}
    >
     <Heading
-    textAlign={'center'}
-    >SignIn</Heading>
+    textAlign={'center'}>LogIn</Heading>
+    
     <FormLabel mt='4'>Email</FormLabel>
     <Input type='text' placeholder='Enter your email'  name='email' value={formdata.email} onChange={handleChange} />
     <FormLabel mt='4'>Password</FormLabel>

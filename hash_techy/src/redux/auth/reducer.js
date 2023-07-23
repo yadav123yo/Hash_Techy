@@ -15,8 +15,8 @@ const initialState = {
     error: false,
     token: T ,
     isAuth: !!T,
-    message: '',
-    role: ''
+    name : localStorage.getItem('name') || '',
+    message: ''
 };
 
 export const authReducer = (state = initialState, { type, payload }) => {
@@ -50,6 +50,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
                 message: ''
             };
         case AUTH_SIGNIN_SUCCESS:
+            localStorage.setItem('name', payload.name);
             localStorage.setItem('token', payload.token);
             return {
                 ...state,
@@ -58,7 +59,7 @@ export const authReducer = (state = initialState, { type, payload }) => {
                 token: payload.token,
                 isAuth: true,
                 message: payload.message,
-                role: payload.role
+                name : payload.name
             };
         case AUTH_SIGNIN_ERROR:
             return {
@@ -69,14 +70,14 @@ export const authReducer = (state = initialState, { type, payload }) => {
             };
         case AUTH_LOGOUT:
             localStorage.removeItem('token');
+            localStorage.removeItem('name');
             return {
                 ...state,
                 loading: false,
                 error: false,
                 token: null,
                 isAuth: false,
-                message: '',
-                role: ''
+                message: ''
             };
         case AUTH_RESET_MESSAGE:
             return {
